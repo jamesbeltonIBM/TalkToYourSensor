@@ -4,5 +4,6 @@ This repository contains the 2 Node-RED flows and 1 Watson Conversation json fil
 The link to the original tutorial is:
 https://developer.ibm.com/recipes/tutorials/talk-to-your-sensor-using-the-watson-iot-platform-and-conversation-services/
 
-In using these nodes, you will need to create a mySQL service and you will need to configure your nodes with mySQL connection information. You can find out more about how to do that in my post which is here:
+# How to use
+If you would rather use mySQL as opposed to dashDB / DB2 Warehouse for your data repository, then use these flows. There are minor differences. First, a function node has been put in the flow which creates a msg.topic that holds the SQL query for mySQL to then execute. Second, since you cannot bind the mySQL service directly to Node-RED, you must provide the orange mySQL nodes with your connection information. Also, you'll need to use mySQL Workbench or similar to create the required tables.  You can find out more about how to do that in my post which is here:
 https://developer.ibm.com/dwblog/2018/talking-cleardb-mysql-via-node-red-ibm-cloud/
